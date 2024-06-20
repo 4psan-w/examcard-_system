@@ -1,24 +1,26 @@
+# necessary modules to work with
 import random as  r
 import time as t
 import string as s
 
-
+# this fucntion generates 6 dgit OTP kinda code for the confirmation of the payment of the student's fees
 def give_code():
     N = 6
     res = ''.join(r.choices(s.ascii_uppercase +s.digits, k=N))
     return res
-
+# this fucntion generates the 9 digit number which then gets passed to be later called a symbol number of the student
 def sym_num():
     range_start = 10**(9-1)
     range_end = (10**9)-1
     return r.randint(range_start, range_end)
+#  this function is responsible for generating a centre randomly as there is nothing specific to do with the exam centres but ill consider changing the centres as per the students Symbol number and their colleges later
 
 def exam_center():
     centres=["Ambition college","patan Multiple campus",
             "Himalayan White house","KMC","GLobal ","Golden Gate",
             "LiverPool","Kings","Milestone","Texas"]
     return r.choice(centres)
-
+# this ffunction assures the payment process of the studnents whose fees are yet to be paid will have to go through this process
 def payment(std):
     print("_________________________________________________________________________________________")
     print('PAYMENT METHODS:\n')
