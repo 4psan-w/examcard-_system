@@ -21,6 +21,7 @@ def exam_center():
             "LiverPool","Kings","Milestone","Texas"]
     return r.choice(centres)
 # this ffunction assures the payment process of the studnents whose fees are yet to be paid will have to go through this process
+# A payment process in short
 def payment(std):
     print("_________________________________________________________________________________________")
     print('PAYMENT METHODS:\n')
