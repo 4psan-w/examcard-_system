@@ -113,7 +113,7 @@ def payment(std):
                     std=Exam_form()
                 else:
                     print("Invalid Code!!")
-
+#  a class that defines the details of the student
 class stud_deet:
     def __init__(self):
         self.name=input("Enter Name>>\n")
@@ -132,7 +132,7 @@ class stud_deet:
             self=Exam_form()
 
 
-
+#  another class that deals with the registration of the student
 class Exam_form:
     def __init__(self):
         self.reg_n=input("Enter Your Reg.No>>")
@@ -144,6 +144,7 @@ class Exam_form:
         print(f"Your symbol number is {self.symb} and your exam centre is {self.Center}")
         print("BEST OF LUCK FOR YOUR EXAMS!!")
 
+# this section of code is for the number of student as there can be multiple students as a time
 x=int(input("Enter the number of students :\n"))
 x=97+x
 for i in range(97,x):
